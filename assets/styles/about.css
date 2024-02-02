@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+main {
+  flex-direction: column;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+section:first-child {
+  min-height: calc(100vh - 60px);
+}
+
+.profile {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.detail {
+  width: 850px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 75px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: xx-large;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+.image-container {
+  width: 50%;
+  margin: 0 45px;
+}
+
+.image-container img {
+  border-radius: 10px;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  background-size: contain;
+}
+
+.image-container .second {
+  display: block;
+}
+
+.image-container .first {
+  display: none;
+}
+
+.bio {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.bio .name {
+  text-align: left;
+  font-size: x-large;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+.bio span {
+  text-align: left;
+  letter-spacing: 1px;
+  font-size: 15.5px;
+}
+
+.resume {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.grid-container .grid-item {
+  width: 560px;
+}
+
+.grid-item img {
+  width: 100%;
+  background-size: contain;
+}
+
+.collaborate-now-btn {
+  display: flex;
+  text-align: center;
+  padding: 12px 24px; /* Button padding */
+  font-size: 20px; /* Adjust the size to match your design */
+
+  text-transform: uppercase; /* Assuming uppercase text for the button */
+  background-color: black; /* White background for the button */
+  color: white; /* Black text color for the button */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  letter-spacing: 2px;
+}
+
+.detail .collaborate-now-btn {
+  display: none;
+}
+
+.collaborate-now-btn:hover {
+  background-color: darkgray; /* Light grey background on hover */
+}
+
+@media only screen and (max-width: 860px) {
+  section {
+    min-height: 100vh;
+  }
+
+  .detail {
+    flex-direction: column;
+  }
+
+  .image-container {
+    width: 50%;
+  }
+
+  .bio span,
+  .bio .name {
+    text-align: center;
+  }
+
+  .bio {
+    width: 100%;
+  }
+  .profile .title {
+    display: none;
+  }
+
+  .bio .name {
+    margin: 30px 0;
+  }
+
+  .detail {
+    width: auto;
+  }
+
+  .detail .collaborate-now-btn {
+    margin-top: 50px;
+    display: flex;
+  }
+
+  .image-container .second {
+    display: none;
+  }
+
+  .image-container .first {
+    display: block;
+  }
+
+  .grid-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grid-item {
+    margin: 50px;
+    max-width: 80%;
+  }
+
+  .resume .collaborate-now-btn {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .image-container {
+    width: 70%;
+  }
+
+  .bio .name {
+    letter-spacing: 1px;
+  }
+
+  .bio span {
+    letter-spacing: 0px;
+    font-size: 13.5px;
+  }
+
+  .collaborate-now-btn {
+    padding: 9px 18px;
+    font-size: small;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .bio span {
+    font-size: 12px;
+  }
+}

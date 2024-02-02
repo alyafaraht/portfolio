@@ -1,0 +1,542 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+body,
+html {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.fixed-background {
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.fixed-background:first {
+  height: calc(100vh - 60px);
+}
+
+.second {
+  z-index: 1;
+}
+
+.content {
+  height: 100vh;
+  display: flex;
+  position: fixed;
+}
+
+.content:first {
+  height: calc(100vh - 60px);
+}
+
+.fixed-background .second {
+  height: 100vh;
+}
+
+.second .content {
+  position: relative;
+  background-color: black;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.row {
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+}
+
+.more {
+  flex: 1;
+  height: 30%;
+  padding: 0 10%;
+  flex-direction: row;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: space-between;
+}
+
+.block {
+  flex: 1;
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 80px;
+  font-family: "Arial", sans-serif;
+}
+
+.column {
+  margin: 0;
+}
+
+.block .h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 4em;
+  letter-spacing: 0.02em;
+  line-height: 1.2em;
+}
+
+.block .quote {
+  font-style: italic;
+}
+
+.block p {
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+#background-section {
+  flex: 3;
+  background-image: url("../images/landing.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.shop-now-btn {
+  text-decoration: none;
+  padding: 12px 24px; /* Button padding */
+  font-size: 16px; /* Adjust the size to match your design */
+  text-transform: uppercase; /* Assuming uppercase text for the button */
+  background-color: black; /* White background for the button */
+  color: white; /* Black text color for the button */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  letter-spacing: 2px;
+}
+
+.shop-now-btn:hover {
+  background-color: darkgray; /* Light grey background on hover */
+}
+
+.offer {
+  text-transform: uppercase;
+  padding-bottom: 5%;
+  display: flex;
+  align-items: center;
+}
+
+.offer-text {
+  font-size: 24px; /* Adjust size as needed */
+  font-weight: bold;
+}
+
+.countdown {
+  margin-bottom: 5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: center;
+  align-items: center;
+}
+
+.number-unit {
+  text-align: center;
+  margin-left: 40px;
+}
+
+.number {
+  font-size: 48px; /* Adjust size as needed */
+  font-weight: bold;
+}
+
+.unit {
+  display: block;
+  font-size: 16px; /* Adjust size as needed */
+}
+
+.second .container {
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-start: 1;
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  align-items: flex-end;
+  width: 100%;
+  padding: 0 10%;
+  margin: 10% 0;
+}
+
+.container .item {
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.container .item:hover {
+  transform: translateY(-3px);
+  border-radius: 5px;
+}
+
+.container .number {
+  font-size: 60px;
+  color: white;
+  margin-bottom: 5%;
+}
+.container .text {
+  font-size: 22px;
+  color: white;
+}
+
+.second .button {
+  padding: 12px 24px; /* Button padding */
+  text-decoration: none;
+  font-size: x-large; /* Adjust the size to match your design */
+  text-transform: uppercase; /* Assuming uppercase text for the button */
+  background-color: white; /* White background for the button */
+  color: black; /* Black text color for the button */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  letter-spacing: 2px;
+}
+
+.second .button:hover {
+  background-color: lightgrey; /* Light grey background on hover */
+}
+.image-footer {
+  flex: 1;
+  width: 100%; /* Full width */
+  background-image: url("../images/footer.jpeg"); /* Path to your image */
+  background-size: cover; /* Cover the entire width */
+  background-position: top; /* Align the image to the top */
+}
+
+.inside {
+  flex: 8;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .second .button {
+    padding: 12px 24px; /* Button padding */
+    text-decoration: none;
+    font-size: large; /* Adjust the size to match your design */
+  }
+
+  .second .number {
+    font-size: 3rem;
+  }
+
+  .second .text {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .block {
+    padding: 20px 20px;
+  }
+
+  .block .h1 {
+    font-size: xx-large;
+  }
+
+  .block p,
+  .block a {
+    font-size: smaller;
+  }
+
+  .more {
+    padding: 0 20px;
+  }
+
+  .offer-text {
+    font-size: small; /* Adjust size as needed */
+    text-align: left;
+    margin-right: 0;
+  }
+
+  .number-unit {
+    margin-left: 10px;
+  }
+
+  .number-unit:first {
+    margin-left: 0;
+  }
+
+  .number {
+    font-size: xx-large; /* Adjust size as needed */
+  }
+
+  .unit {
+    font-size: xx-small; /* Adjust size as needed */
+  }
+
+  .shop-now-btn {
+    padding: 8px 16px; /* Button padding */
+  }
+
+  .block p {
+    font-size: small;
+    margin-top: 12px;
+    margin-bottom: 16px;
+  }
+
+  .block a {
+    font-size: smaller;
+  }
+
+  .second .container {
+    display: grid;
+    justify-content: space-evenly;
+    row-gap: 35%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container .number {
+    margin-bottom: 0;
+  }
+  .container .text {
+    font-size: 22px;
+    color: white;
+  }
+
+  .second .button {
+    padding: 12px 24px; /* Button padding */
+    text-decoration: none;
+    font-size: x-large; /* Adjust the size to match your design */
+    text-transform: uppercase; /* Assuming uppercase text for the button */
+    background-color: white; /* White background for the button */
+    color: black; /* Black text color for the button */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    letter-spacing: 2px;
+  }
+
+  .second .button:hover {
+    background-color: lightgrey; /* Light grey background on hover */
+  }
+  .image-footer {
+    flex: 1;
+    width: 100%; /* Full width */
+    background-image: url("../images/footer.jpeg"); /* Path to your image */
+    background-size: cover; /* Cover the entire width */
+    background-position: top; /* Align the image to the top */
+  }
+
+  .inside {
+    flex: 8;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .second .button {
+      padding: 12px 24px; /* Button padding */
+      text-decoration: none;
+      font-size: large; /* Adjust the size to match your design */
+    }
+
+    .second .number {
+      font-size: 3rem;
+    }
+
+    .second .text {
+      font-size: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .row {
+      flex-direction: column;
+    }
+
+    .block {
+      padding: 20px 20px;
+    }
+
+    .block .h1 {
+      font-size: xx-large;
+    }
+
+    .block p,
+    .block a {
+      font-size: smaller;
+    }
+
+    .more {
+      padding: 0 20px;
+    }
+
+    .offer-text {
+      font-size: small; /* Adjust size as needed */
+      text-align: left;
+      margin-right: 0;
+    }
+
+    .number-unit {
+      margin-left: 10px;
+    }
+
+    .number-unit:first {
+      margin-left: 0;
+    }
+
+    .number {
+      font-size: xx-large; /* Adjust size as needed */
+    }
+
+    .unit {
+      font-size: xx-small; /* Adjust size as needed */
+    }
+
+    .shop-now-btn {
+      padding: 8px 16px; /* Button padding */
+    }
+
+    .block p {
+      font-size: small;
+      margin-top: 12px;
+      margin-bottom: 16px;
+    }
+
+    .block a {
+      font-size: smaller;
+    }
+
+    .second .container {
+      display: grid;
+      justify-content: space-evenly;
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 25%;
+    }
+
+    .second .button {
+      padding: 9px 18px; /* Button padding */
+      text-decoration: none;
+      font-size: medium; /* Adjust the size to match your design */
+    }
+
+    .second .number {
+      font-size: 2.5rem;
+    }
+
+    .second .text {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .offer {
+      flex: 1;
+    }
+
+    .more {
+      padding-right: 0;
+    }
+
+    .countdown,
+    .offer {
+      padding-bottom: 30px;
+    }
+
+    .countdown {
+      flex: 4;
+    }
+
+    .second .button {
+      padding: 9px 18px; /* Button padding */
+      text-decoration: none;
+      font-size: small; /* Adjust the size to match your design */
+    }
+
+    .second .number {
+      font-size: xx-large;
+    }
+
+    .second .text {
+      font-size: small;
+    }
+  }
+  .second .button {
+    padding: 9px 18px; /* Button padding */
+    text-decoration: none;
+    font-size: medium; /* Adjust the size to match your design */
+  }
+
+  .second .number {
+    font-size: 2.5rem;
+  }
+
+  .second .text {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .offer {
+    flex: 1;
+  }
+
+  .more {
+    padding-right: 0;
+  }
+
+  .countdown,
+  .offer {
+    padding-bottom: 30px;
+  }
+
+  .countdown {
+    flex: 4;
+  }
+
+  .second .button {
+    padding: 9px 18px; /* Button padding */
+    text-decoration: none;
+    font-size: small; /* Adjust the size to match your design */
+  }
+
+  .second .number {
+    font-size: xx-large;
+  }
+
+  .second .text {
+    font-size: small;
+  }
+}

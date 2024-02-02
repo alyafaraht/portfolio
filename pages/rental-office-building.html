@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rental Office Building - Alya Farah Taufiqoh</title>
+    <link rel="stylesheet" href="../assets/styles/project-detail.css" />
+    <script src="../elements/elements.js"></script>
+  </head>
+
+  <body>
+    <my-header></my-header>
+    <div id="overlay"></div>
+
+    <main>
+      <section>
+        <center id="academic" class="navigation">
+          <a href="index.html">Alya </a>
+          >
+          <a href="academic.html">Projects > Academic</a>
+          >
+          <a href="#">Rental Office Building</a>
+        </center>
+        <img src="../assets/images/A.png" alt="Collections" width="100%" />
+      </section>
+
+      <section>
+        <h2>Rental Office Building</h2>
+        <div class="project-informations">
+          <div class="sub-project-information">
+            <div class="detail-information">
+              <p>Project</p>
+              <div class="project-metadata">
+                <p>Design Studio 2019</p>
+              </div>
+            </div>
+            <div class="detail-information">
+              <p>Supervisor</p>
+              <div class="project-metadata">
+                <p>Dr.Eng. Agus Hariyadi</p>
+                <p>Dr.Eng. Nedyomukti Imam Syafii</p>
+              </div>
+            </div>
+            <div class="detail-information">
+              <p>Location</p>
+              <div class="project-metadata">
+                <p>Jakarta, Indonesia</p>
+              </div>
+            </div>
+            <div class="detail-information">
+              <p>Emphasize of the study</p>
+              <div class="project-metadata">
+                <p>Computational design</p>
+              </div>
+            </div>
+          </div>
+          <div class="sub-project-information">
+            <p>
+              Rental office has made its way up along with the emerging and
+              popularity of start-up business and the highly-priced land. The
+              design of this rental office can accommodates at the least of 500
+              employee, which are occupied in the computationed floor amount
+              (tower of 32 fl).
+            </p>
+            <p>
+              Computational design has been used since the very first design
+              stage of the design process, which was defining the area that is
+              allowed to be built. This stage then followed with the step of
+              defining the floor amount as well as the tower form by using
+              grasshopper with the government regulation and the occupancy as
+              the parameters. The enhancements has been utilized with regard to
+              the building performance. The design process used grasshopper and
+              honeybee to determined the most efficient facade (the double skin
+              facade).
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <div class="img-container">
+            <img class="mini-img" src="../assets/images/B1.png" alt="" />
+          </div>
+          <div class="img-container">
+            <img class="mini-img" src="../assets/images/B2.png" alt="" />
+          </div>
+          <div class="img-container">
+            <img class="mini-img" src="../assets/images/B3.png" alt="" />
+          </div>
+          <div class="img-container">
+            <img class="mini-img" src="../assets/images/B4.png" alt="" />
+          </div>
+          <div class="img-container">
+            <img class="mini-img" src="../assets/images/B5.png" alt="" />
+          </div>
+          <div class="img-container">
+            <img class="mini-img" src="../assets/images/B6.png" alt="" />
+          </div>
+          <div class="img-container">
+            <img class="mini-img" src="../assets/images/B7.png" alt="" />
+          </div>
+          <div class="img-container">
+            <img class="mini-img" src="../assets/images/B8.png" alt="" />
+          </div>
+          <div class="img-container">
+            <img class="mini-img" src="../assets/images/B9.png" alt="" />
+          </div>
+          <div class="img-container">
+            <img class="mini-img" src="../assets/images/B10.png" alt="" />
+          </div>
+          <div class="img-container">
+            <img class="mini-img" src="../assets/images/B11.png" alt="" />
+          </div>
+          <div class="img-container">
+            <img class="mini-img" src="../assets/images/B12.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="center">
+          <div class="button-wrapper">
+            <button class="button-6 bbutton" role="button">
+              Request More Information
+            </button>
+          </div>
+          <div class="button-wrapper">
+            <button class="button-6 wbutton" role="button">
+              Contact Me For Collaboration
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var dropdowns = document.querySelectorAll(".dropdown");
+        var overlay = document.getElementById("overlay");
+        dropdowns.forEach(function (dropdown) {
+          dropdown.addEventListener("mouseover", function () {
+            overlay.style.display = "block";
+          });
+          dropdown.addEventListener("mouseout", function () {
+            overlay.style.display = "none";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,475 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Black with 70% opacity */
+  z-index: 1; /* Position it above the content but beneath the dropdown */
+  display: none;
+}
+
+header {
+  flex-shrink: 0;
+
+  background-color: #ffffff;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+header .container {
+  margin: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+header a,
+.dropdown {
+  color: #333;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background-color 0.3s;
+}
+
+header a:hover,
+.dropdown:hover {
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+header .fab-menu .fab-content {
+  display: block;
+}
+
+header .fab-menu .fab {
+  display: none;
+}
+header .dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+header .dropdown-content {
+  font-weight: 200;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+  border-radius: 5px;
+  z-index: 4;
+}
+
+header .dropdown-content a {
+  color: #333;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+header .dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+header .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+main {
+  scroll-behavior: smooth;
+  min-height: 100%;
+  margin: 0px;
+}
+
+.gallery {
+  justify-content: space-around;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  align-items: center;
+  width: 98%;
+}
+
+.navigation {
+  color: grey;
+  font-weight: 200;
+  margin-bottom: 3vh;
+}
+
+.mini-img {
+  width: 150px;
+}
+
+.project-informations,
+.detail-information {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+div .sub-project-information {
+  width: 49%;
+}
+
+div .project-metadata {
+  align-items: left;
+  width: 60%;
+  color: grey;
+}
+
+div .img-container {
+  text-align: center;
+  width: 150px;
+}
+
+/* CSS */
+.wbutton {
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.wbutton:active {
+  background-color: #f0f0f1;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.bbutton {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.button-6 {
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.9rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Inter", sans-serif;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  min-width: 100%;
+  padding: 20px 30px;
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button-6:hover,
+.button-6:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.button-6:hover {
+  transform: translateY(-1px);
+}
+
+.button-6:active {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
+}
+.bbuton:active,
+.bbutton:hover {
+  background-color: #000000;
+  color: #f0f0f1;
+}
+
+.button-wrapper {
+  width: 50%;
+  text-align: center;
+  padding: 5px;
+  margin: 0 25%;
+}
+
+@media only screen and (min-width: 1628px) {
+}
+
+@media only screen and (max-width: 768px) {
+  .project-informations {
+    flex-direction: column;
+  }
+
+  .detail-information {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  div .project-metadata {
+    width: 50%;
+  }
+
+  div .sub-project-information {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .button-6 {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .center {
+    width: 90%;
+  }
+
+  .gallery {
+    grid-template-columns: auto auto auto;
+  }
+
+  main {
+    padding: 2% 5%;
+  }
+
+  header .fab-menu .fab-content {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: none;
+    position: fixed;
+    bottom: 75px;
+    right: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  header .section {
+    flex-direction: column;
+  }
+
+  header .fab-menu .fab {
+    position: fixed;
+    z-index: 1000;
+    display: inline-block;
+    width: 56px; /* adjust as needed */
+    height: 56px; /* adjust as needed */
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    bottom: 20px; /* adjust as needed */
+    right: 20px; /* adjust as needed */
+  }
+
+  header .fab-menu:hover .fab-content {
+    display: block;
+  }
+
+  header .fab-menu .fab:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5), 0 0 0 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .fab-content .fab-block {
+    display: block;
+  }
+
+  .dropdown-content {
+    right: 85px;
+    bottom: 0;
+  }
+  .mini-img {
+    width: 120px;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (max-width: 576px) {
+  header .container {
+    margin: 0 15px;
+  }
+
+  .project-informations {
+    flex-direction: column;
+  }
+
+  div .sub-project-information,
+  div .project-metadata,
+  div .img-container {
+    width: 100%;
+  }
+
+  div .project-metadata {
+    width: 50%;
+  }
+
+  .button-6 {
+    padding: 15px 20px;
+  }
+
+  .navigation {
+    font-size: 14px;
+  }
+
+  .gallery {
+    grid-template-columns: auto auto;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media only screen and (max-width: 400px) {
+  .navigation {
+    font-size: 12px;
+  }
+
+  header a,
+  .dropdown {
+    padding: 6px 8px;
+  }
+
+  header .dropdown-content a {
+    padding: 8px 10px;
+  }
+}
+
+.first {
+  overflow: hidden;
+  height: 75vh;
+  display: flex;
+}
+
+.block {
+  flex: 1;
+  background-color: lightgrey;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 80px;
+  font-family: "Arial", sans-serif;
+}
+
+.block .h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 6.5vh;
+  letter-spacing: 0.2vh;
+  line-height: 7vh;
+}
+
+.block p {
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+#background-section {
+  height: 100%;
+  flex: 3;
+  background-image: url("../images/A.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: scroll;
+}
+.shop-now-btn {
+  padding: 12px 24px; /* Button padding */
+  font-size: 16px; /* Adjust the size to match your design */
+  text-transform: uppercase; /* Assuming uppercase text for the button */
+  background-color: black; /* White background for the button */
+  color: white; /* Black text color for the button */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  letter-spacing: 2px;
+}
+
+.shop-now-btn:hover {
+  background-color: darkgray; /* Light grey background on hover */
+}
+
+.more {
+  height: 20vh;
+  padding: 0 40px;
+  flex-direction: row;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.offer {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.offer-text {
+  font-size: 24px; /* Adjust size as needed */
+  font-weight: bold;
+  align-items: center;
+}
+
+.countdown {
+  display: flex;
+}
+
+.number-unit {
+  text-align: center;
+  margin-left: 40px;
+}
+
+.number {
+  font-size: 48px; /* Adjust size as needed */
+  font-weight: bold;
+}
+
+.unit {
+  display: block;
+  font-size: 16px; /* Adjust size as needed */
+}
+
+section {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../assets/images/A.png");
+  position: relative; /* Add this line */
+}
+
+section .components {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  position: fixed;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academic - Alya Farah Taufiqoh</title>
+    <link rel="stylesheet" href="../assets/styles/project-menu.css" />
+    <script src="../elements/elements.js"></script>
+  </head>
+  <body>
+    <my-header></my-header>
+
+    <main>
+      <div class="detail-wrapper">
+        ACADEMIC
+        <a href="mailto:alyafaraht@gmail.com" class="button-59" role="button"
+          >COLLABORATE NOW</a
+        >
+      </div>
+
+      <div class="wrapper">
+        <button class="scroll-btn left" onclick="scrollItem(-1)">
+          &#10094;
+        </button>
+        <div class="scrolling-wrapper" id="scroll-container">
+          <a class="item" href="pakistani-housing.html">
+            <div class="image-container">
+              <img src="../assets/images/pakistani-housing.jpeg" alt="" />
+            </div>
+            <div class="data-container">
+              <span class="title">Pakistani Housing</span>
+              <span class="type">Studio Project</span>
+              <span class="year">2023</span>
+            </div>
+          </a>
+          <a class="item" href="time-is-life.html">
+            <div class="image-container">
+              <img src="../assets/images/time-is-life.jpeg" alt="" />
+            </div>
+            <div class="data-container">
+              <span class="title">Time is Life</span>
+              <span class="type">Studio Project</span>
+              <span class="year">2023</span>
+            </div>
+          </a>
+          <a class="item" href="library-makerspace.html">
+            <div class="image-container">
+              <img src="../assets/images/library-makerspace.jpeg" alt="" />
+            </div>
+            <div class="data-container">
+              <span class="title">Library Makerspace</span>
+              <span class="type">Thesis Project</span>
+              <span class="year">2020</span>
+            </div>
+          </a>
+          <a class="item" href="rental-office-building.html">
+            <div class="image-container">
+              <img src="../assets/images/A.png" alt="" />
+            </div>
+            <div class="data-container">
+              <span class="title">Rental Office Building</span>
+              <span class="type">Studio Project</span>
+              <span class="year">2019</span>
+            </div>
+          </a>
+        </div>
+        <a class="scroll-btn right" onclick="scrollItem(1)">&#10095;</a>
+      </div>
+    </main>
+    <script>
+      function scrollItem(direction) {
+        const container = document.getElementById("scroll-container");
+        const scrollAmount = container.querySelector(".item").offsetWidth + 20;
+        if (direction === 1) {
+          container.scrollLeft += scrollAmount;
+        } else {
+          container.scrollLeft -= scrollAmount;
+        }
+      }
+
+      function checkButtonVisibility() {
+        const container = document.getElementById("scroll-container");
+        const leftButton = document.querySelector(".scroll-btn.left");
+        const rightButton = document.querySelector(".scroll-btn.right");
+
+        const maxScrollLeft = container.scrollWidth - container.clientWidth;
+        if (container.scrollLeft === 0) {
+          leftButton.style.display = "none";
+        } else {
+          leftButton.style.display = "block";
+        }
+
+        if (container.scrollLeft >= maxScrollLeft) {
+          rightButton.style.display = "none";
+        } else {
+          rightButton.style.display = "block";
+        }
+      }
+
+      document
+        .getElementById("scroll-container")
+        .addEventListener("scroll", checkButtonVisibility);
+
+      window.onload = checkButtonVisibility;
+    </script>
+  </body>
+</html>
